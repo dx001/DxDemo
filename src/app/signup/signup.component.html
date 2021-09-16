@@ -1,0 +1,26 @@
+<button (click)="goHome()" class="btn btn-primary">
+    Home
+   </button>
+<div>
+    <table class="table table-striped">
+        <thead>
+            <th>Prod ID</th> <th>Prod Name</th> <th> Price</th>  
+            <th> Action</th>  
+              
+        </thead>
+        <tbody>
+    <tr *ngFor="let p of prodData; let i=index">
+        <td>{{p.prodid}}</td>
+        <td>{{p.prodname}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.category}}</td>
+        <td> 
+           <button (click)="EditProd(p.prodid)" >Edit Product</button>
+           <button (click)="deleteProd(i)" >Delete</button>
+        </td>     
+                      
+            </tr>
+        </tbody>
+    </table>
+</div>
+

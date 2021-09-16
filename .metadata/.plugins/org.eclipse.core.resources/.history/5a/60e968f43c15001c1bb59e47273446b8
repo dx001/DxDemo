@@ -1,0 +1,19 @@
+package com.lti.jnuit;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TestT {
+
+	@Test
+	void test() {
+		MyProg m = new MyProg();
+		int [] a = {1,2,2,3,4,5};
+		int [] r= {1,2,3,4,5};
+		int[] res= m.fun(a);
+	    assertArrayEquals(res,r);
+	    }
+ 
+	
+}

@@ -1,0 +1,11 @@
+package com.lti.jnuit;
+
+public class MyProg {
+  
+	public String fun()
+	{
+		String res = "Dheeraj";
+		return(res);
+	}
+
+}

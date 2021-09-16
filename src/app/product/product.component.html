@@ -1,0 +1,35 @@
+<p>product works!</p>
+<!--
+<form  [formGroup]="prodForm" (ngSubmit)="saveData()">
+    <table>
+            <tr><td><label for="prodid">Prod ID</label> </td>
+                <td><input type="text" name="productid" formControlName="prodid"></td>
+            </tr>
+            <tr><td><label for="prodname">Product Name</label> </td>
+            <td><input type="text" formControlName="prodname"></td>
+            </tr>
+            <tr><td><label for="price">Product Price</label> </td>
+                <td><input type="text" name="price" formControlName="price"></td>
+            </tr>
+            <tr><td><label for="price">Supplier Email</label> </td>
+                <td><input type="text" name="supemail" formControlName="supemail"></td>
+            </tr>
+           <tr>
+            <td> </td>
+            <td><button type="submit" [disabled]="!prodForm.valid">Save Product</button></td>
+      </tr>
+    </table>
+</form>
+
+<a routerLink="demos"> Page Moved ... Go There</a> -->
+
+<table class="table table-striped" style="border: 1;">
+    <tr><td>ProdID</td> <td>Prod Name</td> <td>Desc</td>
+    </tr>
+        <tr *ngFor="let p of prodsData">
+                <td>{{p.id}}</td><td>{{p.name}}</td>
+                <td><a [routerLink]="['productdet',p.id]">Show Description</a> </td>
+        </tr>
+</table>
+
+<router-outlet></router-outlet>

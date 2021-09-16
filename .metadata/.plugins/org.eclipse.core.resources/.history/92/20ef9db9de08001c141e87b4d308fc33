@@ -1,0 +1,21 @@
+package com.lti;
+import java.util.*;
+
+class Student
+{
+	String s = new String("dheeraj,gaddam,deeksha,fruity,gopal");
+}
+public class Demo {
+	public static void main(String a[])
+	{
+		String s= "dheeraj";
+		Map<Character,Integer> c = new TreeMap<Character,Integer>();
+		for (char k : s.toCharArray())
+		{
+			if(!c.containsKey(k))
+				c.put(k,c.getOrDefault(k,2));
+	
+		}
+	     System.out.print(c);
+	}
+}

@@ -1,0 +1,19 @@
+package com.lti.jnuit;
+import java.util.*;
+public class MyProg {
+  
+	public int[] fun(int[] a)
+	{
+	   int[] k;
+	   int cnt=0;
+	   Set<Integer> s = new LinkedHashSet<Integer>();
+	   for(int i:a)
+		   s.add(i);
+	   k=new int[s.size()];
+	   for(int j:s)
+		   k[cnt++]=j;
+	   return(k);
+		
+	}
+
+}

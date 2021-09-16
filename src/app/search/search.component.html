@@ -1,0 +1,40 @@
+<p>search works!</p>
+<button (click)="goHome()" class="btn btn-primary">
+    Home
+   </button>
+<table>
+        <tr>
+            <td>Select the Category</td>
+            <td>
+                <select [(ngModel)]="srch">
+                        <option *ngFor="let c of cats" value="{{c}}"> 
+                                {{c}}
+                        </option>
+                </select>
+            </td>
+            <td> <button (click)="srchProduct()">Search</button></td>
+        </tr>
+</table>
+<div>
+    <table class="table table-striped">
+        <thead>
+            <th>Prod ID</th> <th>Prod Name</th> <th> Price</th>  
+            <th> Action</th>  
+              
+        </thead>
+        <tbody>
+    <tr *ngFor="let p of prodArray; let i=index">
+        <td>{{p.prodid}}</td>
+        <td>{{p.prodname}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.category}}</td>
+        <td> 
+           <button (click)="EditProd(p.prodid)" >Edit Product</button>
+           <button (click)="deleteProd(i)" >Delete</button>
+        </td>     
+                      
+            </tr>
+        </tbody>
+    </table>
+</div>
+

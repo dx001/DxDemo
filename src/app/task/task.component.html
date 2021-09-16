@@ -1,0 +1,34 @@
+<button (click)="goHome()" class="btn btn-primary">
+    Home
+   </button>
+<form #prodForm="ngForm" (ngSubmit)=saveProduct(prodForm) novalidate>
+    <table>
+            <tr><td><label for="prodid">Prod ID</label> </td>
+                <td><input type="text" name="prodid" ngModel required></td>
+            </tr>
+            <tr><td><label for="prodname">Product Name</label> </td>
+            <td><input type="text" name="prodname"
+                 ngModel required minlength="3" maxlength="10"
+                    pattern="^[a-zA-Z]+$"></td>
+            </tr>
+            <tr><td><label for="price">Product Price</label> </td>
+                <td><input type="text" name="price" required ngModel></td>
+            </tr>
+            <tr><td><label for="category">Category</label> </td>
+                <td>
+                   <select name="category" ngModel>
+                        <option value="NA">--select--</option>
+                        <option *ngFor="let c of cats" value="{{c}}">
+                            {{c}}
+                        </option>
+                       
+                    </select>
+                </td>
+            </tr>
+           <tr>
+            <td> </td>
+            <td><button type="submit" [disabled]="!prodForm.valid" class="btn btn-info" >Save Product</button></td>
+      </tr>
+    </table>
+</form>
+

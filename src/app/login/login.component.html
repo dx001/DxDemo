@@ -1,0 +1,28 @@
+<!--
+<table>
+     <thead>
+            <th>ID</th> <th>Name</th> <th>Email </th><th>PostID</th>
+      </thead>
+      <tbody>
+            <tr *ngFor="let p of posts">
+                 <td>  {{p.id}} </td> 
+                 <td>  {{p.name}} </td> 
+                 <td>  {{p.email}} </td> 
+                 <td>  {{p.postId}} </td> 
+                      
+            </tr>
+      </tbody>
+</table>
+
+-->
+
+<table>
+      <tr>
+            <td>Login Name</td> <td><input type="text" name="uid" [(ngModel)]="uid"></td>
+            </tr>
+           <tr> <td>Password</td> <td><input type="password" name="pass" [(ngModel)]="pass"></td>
+           </tr> <tr><td></td> <td>
+                 <button class="btn btn-primary" (click)="validate()">Login</button></td>
+      </tr>
+</table>
+<span style="color: red;">{{logError}}</span>

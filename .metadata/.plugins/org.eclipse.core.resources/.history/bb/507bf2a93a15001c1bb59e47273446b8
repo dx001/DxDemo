@@ -1,0 +1,17 @@
+package com.lti.jnuit;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TestT {
+
+	@Test
+	void test() {
+		MyProg m = new MyProg();
+		
+		//fail("Not yet implemented");
+	    assertEquals("Dheeraj",m)	;
+	    }
+
+}
